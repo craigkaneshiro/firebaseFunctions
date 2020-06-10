@@ -23,7 +23,8 @@ exports.addNewUser = functions.database.ref('/{lineItem}/{orderId}')
 
       return admin.auth().createUser({
         //TODO: uncomment this for prod email: addedRecord.email,
-        email: 'craig.kaneshiro@gmail.com',
+        //email: 'craig.kaneshiro@gmail.com',
+        email: addedRecord.email,
         emailVerified: false
       })
         .then(function(userRecord) {
